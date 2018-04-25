@@ -1,0 +1,12 @@
+form div.row{
+	margin-bottom:10px;
+}
+
+td.words{
+    word-break:break-all;
+    width:500px;
+}
+
+li h4{
+    color:#009900
+}
