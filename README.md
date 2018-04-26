@@ -6,7 +6,7 @@
 
 2、python3 app.py
 
-3、注册一个账号后即可使用
+3、注册一个账号
 
 4、在config.py中设置参数DOMAIN，设置自己的ip或者网址
 
