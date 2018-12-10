@@ -9,7 +9,10 @@ def gen_js():
         admins = User.get_admin()
         if admins:
             admin = admins[0]
-            now = origin.format(domain=config.DOMAIN, token=admin.key)
+            port = ""
+            if port != 80:
+                port = ":"+ str(config.PORT)
+            now = origin.format(domain=config.DOMAIN, token=admin.key, port=port)
             with open("static/js/x.js", "w") as now_file:
                 now_file.write(now)
 
